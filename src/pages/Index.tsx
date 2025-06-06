@@ -48,24 +48,6 @@ const Index = () => {
               Развитие креативного потенциала, стратегический консалтинг и менторство для технологических стартапов.
               Синтез традиций и инноваций востока и запада для достижения выдающихся результатов.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3"
-                onClick={() => navigate("/startups")}
-              >
-                Для стартапов
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3"
-                onClick={() => navigate("/improv-school")}
-              >
-                Школа Русского Импрова
-              </Button>
-            </div>
           </div>
         </div>
       </section>
