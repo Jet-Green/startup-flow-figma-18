@@ -110,8 +110,8 @@ const Startups = () => {
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">Курс "Венчурные инвестиции"</h3>
                     <p className="text-gray-600 mb-6">
-                      Углубленная программа по привлечению венчурного финансирования, включающая практические кейсы,
-                      работу с инвесторами и подготовку к презентациям перед венчурными фондами.
+                      Углубленная программа по созданию и развитию проектов технологического предпринимательства и
+                      креативной экономики.
                     </p>
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-center space-x-2">
@@ -134,7 +134,7 @@ const Startups = () => {
                   </div>
                   <div className="flex justify-center">
                     <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl">
-                      <div className="text-3xl font-bold text-gray-900 mb-2">от 75 000 ₽</div>
+                      <div className="text-3xl font-bold text-gray-900 mb-2">от 100 000 ₽</div>
                       <div className="text-gray-600">Полный курс</div>
                     </div>
                   </div>
@@ -176,7 +176,7 @@ const Startups = () => {
                   </div>
                   <div className="flex flex-col justify-center">
                     <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-                      <div className="text-3xl font-bold text-gray-900 mb-2">от 150 000 ₽</div>
+                      <div className="text-3xl font-bold text-gray-900 mb-2">от 100 000 ₽</div>
                       <div className="text-gray-600 mb-4">Полный пакет упаковки</div>
                       <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white">
                         Заказать упаковку
