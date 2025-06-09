@@ -5,40 +5,25 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Music, Users, Brain, Heart, Star, Clock } from 'lucide-react';
+import { ArrowRight, Music, Users, Brain, Heart, Star } from 'lucide-react';
 
 const ImprovSchool = () => {
-  const programs = [
+  const teamMembers = [
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Программы для взрослых",
-      description: "Развитие креативности, командной работы и навыков принятия решений в условиях неопределенности",
-      duration: "8-12 недель",
-      price: "от 25 000 ₽"
+      name: "Дмитрий Сырцов",
+      image: "/placeholder.svg",
+      description: "основатель школы русского импрова, к.э.н., академический директор инновационных образовательных программ, исследователь и музыкант - мультиинструменталист, внесший свой вклад в развитие новой волны российской музыки, и, как музыкальный продюсер и музыкант сотрудничавший с разными российскими и зарубежными коллективами. Среди них - Кристоф Хан (Swans), и др."
     },
     {
-      icon: <Heart className="w-6 h-6" />,
-      title: "Программы для детей",
-      description: "Всестороннее развитие творческого мышления, эмоционального интеллекта и социальных навыков",
-      duration: "6-10 недель", 
-      price: "от 15 000 ₽"
+      name: "Сергей Храмцевич",
+      image: "/placeholder.svg", 
+      description: "саксофонист и композитор, участник многих стилистически разнообразных музыкальных проектов. Основатель и композитор инди-джаз-группы «THE RIG (Russian Improv Group)», активный участник индустриально-джаз-панк-группы «The OMY» и солист «Kymatic Ensemble». Автор сольного дарк-джазового проекта «Sergei Khramtcevich». Также участник групп: «Baritone Domination», «Интурист», «ГШ», «TOPOT Arkestra», «Godse», проекта «КОЛОКОЛ» техно-музыканта Филиппа Горбачева и множеста других коллабораций, от сотрудничества с Петаром Мартичем и GONE.Fludd, Собаками табака и Kristof Hahn (Swans), группой GNOD (UK) и Faust (DE)."
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Корпоративные программы",
-      description: "Тимбилдинг, развитие лидерских качеств и улучшение коммуникации в коллективе",
-      duration: "2-4 дня",
-      price: "от 50 000 ₽"
+      name: "Иннокентий Людевиг-Чернецкий",
+      image: "/placeholder.svg",
+      description: "(виолончель), антрополог, медиа-художник, музыкальный терапевт. Цель его метода - создание новых путей взаимодействия человека с собой и миром. Его метод позволяет сместить фокус внимания с временных и внешних форм на более глубокие слои психики, за пределы субъект-объектных отношений, выстраивая чувственный диалог в пространстве звука. «Я верю, что музыка и звучание в целом — это канал обращения ко всему сущему. В художественных практиках я возвращаюсь к истокам и разрабатываю новые способы звучания, мышления и действия. Вместе с этим я формирую пространство ритуала — обращаюсь к обрядовой деятельности, что само по себе оказывает глубокий терапевтический эффект и способствует психическому восстановлению человека. Во многом, цель моей работы — очищение звучанием, возвращение к настоящему себе»"
     }
-  ];
-
-  const benefits = [
-    "Развитие креативного мышления",
-    "Улучшение командной работы",
-    "Навыки работы с неопределенностью",
-    "Эмоциональная регуляция",
-    "Синтез восточных и западных традиций",
-    "Индивидуальный подход к каждому"
   ];
 
   return (
@@ -59,24 +44,18 @@ const ImprovSchool = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Культурно-просветительское сообщество, раскрывающее потенциал импровизации 
-              в синтезе восточных и западных традиций. Импровизация как мост, соединяющий 
-              Запад и Восток, традиции и инновации.
+              Культурно-просветительское сообщество, ставящее своей целью раскрытие потенциала 
+              импровизации в синтезе восточных и западных традиций. Здесь импровизация - мост, 
+              соединяющий Запад и Восток, архаику, традиции и инновации, зрителя и артиста, 
+              порядок и хаос.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3"
               >
-                Записаться на пробное занятие
+                Записаться на занятие
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-purple-600 text-purple-600 hover:bg-purple-50 px-8 py-3"
-              >
-                Узнать больше
               </Button>
             </div>
           </div>
@@ -86,24 +65,24 @@ const ImprovSchool = () => {
       {/* Philosophy Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-              Философия школы
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="text-left">
-                <p className="text-lg text-gray-700 mb-6">
-                  Школа Русского Импрова — это культурно-просветительское сообщество, 
-                  ставящее своей целью раскрытие потенциала импровизации в синтезе 
-                  восточных и западных традиций.
-                </p>
-                <p className="text-lg text-gray-700 mb-6">
-                  Здесь импровизация — мост, нечто соединяющее моментом Запад и Восток, 
-                  архаику, традиции и инновации, зрителя и артиста, порядок и хаос.
-                </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                Философия школы
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="text-left space-y-6">
                 <p className="text-lg text-gray-700">
                   В современном мире креативность и способность эффективно действовать 
                   в условиях неопределенности играют ключевую роль.
+                </p>
+                <p className="text-lg text-gray-700">
+                  Богатейший опыт импровизации в музыке открывает широчайшее междисциплинарное 
+                  поле для развития навыка эффективного действия в условиях неопределенности 
+                  и развития и реализации творческого потенциала личности за пределами 
+                  музыкального контекста.
                 </p>
               </div>
               <div className="flex justify-center">
@@ -121,139 +100,99 @@ const ImprovSchool = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Interdisciplinary Approach */}
       <section className="py-16 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Что даёт обучение
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+              Междисциплинарный подход
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Участники научатся использовать принципы и механику импровизации 
-              для улучшения различных аспектов жизни и работы
-            </p>
-          </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardHeader className="text-center">
+                  <div className="mx-auto mb-4 p-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl w-fit">
+                    <Brain className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <CardTitle className="text-lg">Развитие креативности</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600">
+                    Освобождение творческого потенциала через музыкальную импровизацию
+                  </p>
+                </CardContent>
+              </Card>
 
-          <div className="max-w-4xl mx-auto">
-            <Card className="shadow-xl bg-white/80 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-3 p-4 bg-white rounded-lg shadow-sm">
-                      <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
-                      <span className="text-gray-700 font-medium">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardHeader className="text-center">
+                  <div className="mx-auto mb-4 p-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl w-fit">
+                    <Heart className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <CardTitle className="text-lg">Эмоциональная регуляция</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600">
+                    Управление эмоциями и состояниями через звуковые практики
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardHeader className="text-center">
+                  <div className="mx-auto mb-4 p-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl w-fit">
+                    <Users className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <CardTitle className="text-lg">Командное взаимодействие</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600">
+                    Развитие навыков коллективного творчества и синхронизации
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Programs Section */}
+      {/* Team Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Инновационные образовательные программы
+              Команда
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Программы для детей и взрослых, адаптированные под разные цели и уровни подготовки
+              Наши преподаватели и менторы - признанные мастера импровизации
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {programs.map((program, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 group">
-                <CardHeader className="text-center pb-4">
-                  <div className="mx-auto mb-4 p-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl w-fit group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-purple-600">
-                      {program.icon}
-                    </div>
-                  </div>
-                  <CardTitle className="text-xl font-bold text-gray-900">
-                    {program.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-gray-600 mb-6">
-                    {program.description}
-                  </p>
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center justify-center space-x-2 text-sm text-gray-500">
-                      <Clock className="w-4 h-4" />
-                      <span>{program.duration}</span>
-                    </div>
-                    <div className="text-2xl font-bold text-gray-900">
-                      {program.price}
-                    </div>
-                  </div>
-                  <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-                    Записаться
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Course Details */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <Card className="shadow-xl">
-              <CardHeader className="text-center bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-t-lg">
-                <CardTitle className="text-2xl md:text-3xl font-bold">
-                  Курс по музыкальной импровизации
-                </CardTitle>
-                <p className="text-purple-100 mt-2">
-                  Развитие навыков через музыку и движение
-                </p>
-              </CardHeader>
-              <CardContent className="p-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">
-                      Что включает курс:
-                    </h3>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
-                        <span className="text-gray-700">Основы музыкальной импровизации</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
-                        <span className="text-gray-700">Развитие творческого мышления</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
-                        <span className="text-gray-700">Техники работы в команде</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
-                        <span className="text-gray-700">Управление эмоциями</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
-                        <span className="text-gray-700">Принятие решений в неопределенности</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="flex flex-col justify-center">
-                    <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl">
-                      <div className="text-3xl font-bold text-gray-900 mb-2">12 занятий</div>
-                      <div className="text-gray-600 mb-4">Полный курс</div>
-                      <div className="text-2xl font-bold text-purple-600 mb-4">от 20 000 ₽</div>
-                      <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-                        Записаться на курс
-                      </Button>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div className="aspect-square overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+                
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-xl font-bold mb-3">{member.name}</h3>
+                    <p className="text-sm leading-relaxed text-gray-200 max-h-48 overflow-y-auto">
+                      {member.description}
+                    </p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+                
+                {/* Name overlay for mobile */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 md:opacity-0 group-hover:opacity-100">
+                  <h3 className="text-white font-bold text-lg">{member.name}</h3>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -266,14 +205,14 @@ const ImprovSchool = () => {
           </h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
             Присоединяйтесь к нашему сообществу и начните путь к развитию креативности 
-            и навыков работы в условиях неопределенности
+            и навыков работы в условиях неопределенности через искусство импровизации
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               className="bg-white text-purple-600 hover:bg-gray-50 px-8 py-3"
             >
-              Пробное занятие бесплатно
+              Записаться на занятие
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button 
