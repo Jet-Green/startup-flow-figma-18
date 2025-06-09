@@ -1,9 +1,10 @@
+
 import React from "react"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Star, TrendingUp, Users, Lightbulb } from "lucide-react"
+import { ArrowRight, Star, TrendingUp, Users, Lightbulb, Building, Target, Zap } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 
 const Index = () => {
@@ -27,6 +28,30 @@ const Index = () => {
       title: "Консалтинг",
       description: "Стратегическое планирование, автоматизация и HR-консалтинг",
       link: "/consulting",
+    },
+  ]
+
+  const cases = [
+    {
+      icon: <Building className="w-8 h-8 text-blue-600" />,
+      title: "Fintech стартап",
+      description: "Помог команде из 3 человек запустить платежную платформу, которая за 18 месяцев достигла оборота $2М",
+      results: ["Рост выручки в 15 раз", "Команда выросла до 25 человек", "Привлечено $500К инвестиций"],
+      industry: "Финтех"
+    },
+    {
+      icon: <Target className="w-8 h-8 text-green-600" />,
+      title: "E-commerce платформа",
+      description: "Оптимизировал бизнес-процессы для маркетплейса, увеличив конверсию на 40%",
+      results: ["Конверсия +40%", "Время обработки заказов -60%", "Автоматизация 80% процессов"],
+      industry: "E-commerce"
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-purple-600" />,
+      title: "EdTech проект",
+      description: "Разработал стратегию выхода на международный рынок для образовательной платформы",
+      results: ["Выход в 5 стран", "База пользователей 50К+", "Монетизация $100К/месяц"],
+      industry: "Образование"
     },
   ]
 
@@ -86,26 +111,46 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      {/* Cases Section */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold mb-2">50+</div>
-              <div className="text-blue-100">Успешных проектов</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">5+</div>
-              <div className="text-blue-100">Лет опыта</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">200+</div>
-              <div className="text-blue-100">Довольных клиентов</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">95%</div>
-              <div className="text-blue-100">Успешность проектов</div>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Успешные кейсы</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Реальные истории роста и трансформации бизнеса
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {cases.map((caseItem, index) => (
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 group">
+                <CardContent className="p-6">
+                  <div className="mb-4 flex items-center justify-between">
+                    <div className="p-3 bg-gray-50 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                      {caseItem.icon}
+                    </div>
+                    <span className="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                      {caseItem.industry}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{caseItem.title}</h3>
+                  <p className="text-gray-600 mb-4">{caseItem.description}</p>
+                  
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-gray-900 text-sm">Результаты:</h4>
+                    <ul className="space-y-1">
+                      {caseItem.results.map((result, resultIndex) => (
+                        <li key={resultIndex} className="text-sm text-gray-600 flex items-center">
+                          <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
