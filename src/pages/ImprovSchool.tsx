@@ -4,7 +4,7 @@ import Footer from "@/components/Footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Music, Users, Brain, Heart, Star } from "lucide-react"
+import { ArrowRight, Music, Users, Brain, Heart, Star, Target, MessageCircle, Lightbulb } from "lucide-react"
 
 const ImprovSchool = () => {
   const teamMembers = [
@@ -26,6 +26,34 @@ const ImprovSchool = () => {
       description:
         "(виолончель), антрополог, медиа-художник, музыкальный терапевт. Цель его метода - создание новых путей взаимодействия человека с собой и миром. Его метод позволяет сместить фокус внимания с временных и внешних форм на более глубокие слои психики, за пределы субъект-объектных отношений, выстраивая чувственный диалог в пространстве звука. «Я верю, что музыка и звучание в целом — это канал обращения ко всему сущему. В художественных практиках я возвращаюсь к истокам и разрабатываю новые способы звучания, мышления и действия. Вместе с этим я формирую пространство ритуала — обращаюсь к обрядовой деятельности, что само по себе оказывает глубокий терапевтический эффект и способствует психическому восстановлению человека. Во многом, цель моей работы — очищение звучанием, возвращение к настоящему себе»",
     },
+  ]
+
+  const courseGoals = [
+    {
+      icon: <Lightbulb className="w-6 h-6" />,
+      title: "Развитие креативного мышления",
+      description: "Участники освоят техники импровизации, которые помогут им мыслить нестандартно и находить оригинальные решения в условиях неопределенности."
+    },
+    {
+      icon: <MessageCircle className="w-6 h-6" />,
+      title: "Улучшение коммуникации",
+      description: "Музыкальная импровизация требует активного слушания и взаимодействия, что способствует развитию навыков эффективной коммуникации внутри команды."
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Работа в команде",
+      description: "Участники научатся работать в группе, принимая во внимание идеи и предложения других."
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: "Адаптация к изменениям",
+      description: "Импровизация учит гибкости и способности быстро реагировать на изменения."
+    },
+    {
+      icon: <Heart className="w-6 h-6" />,
+      title: "Снижение стресса и развитие эмоционального интеллекта",
+      description: "Музыка помогает расслабиться и наладить эмоциональный контакт, что способствует лучшему восприятию информации и взаимодействию с коллегами."
+    }
   ]
 
   return (
@@ -120,7 +148,7 @@ const ImprovSchool = () => {
                   <div className="mx-auto mb-4 p-4 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl w-fit">
                     <Heart className="w-8 h-8 text-purple-600" />
                   </div>
-                  <CardTitle className="text-lg">Эмоциональная регуляция</CardTitle>
+                  <CardTitle className="text-lg">Эмоциональная регуляция</CardHeader>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600">Управление эмоциями и состояниями через звуковые практики</p>
@@ -138,6 +166,95 @@ const ImprovSchool = () => {
                   <p className="text-gray-600">Развитие навыков коллективного творчества и синхронизации</p>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Educational Programs Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Образовательные программы</h2>
+            </div>
+
+            {/* Course Header */}
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 mb-12">
+              <div className="text-center mb-8">
+                <Badge className="mb-4 bg-purple-100 text-purple-600 hover:bg-purple-100">
+                  Курс по импровизации для лидеров
+                </Badge>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                  "Музыка как инструмент креативности и командной работы"
+                </h3>
+                <p className="text-lg text-gray-700 max-w-4xl mx-auto">
+                  В современном мире креативность и способность адаптироваться к изменениям играют ключевую роль в успехе. 
+                  Курс по музыкальной импровизации предлагает уникальную возможность развить эти навыки через музыку. 
+                  Участники научатся использовать принципы импровизации для улучшения командной работы, повышения 
+                  креативности и эффективного решения проблем.
+                </p>
+              </div>
+            </div>
+
+            {/* Course Goals */}
+            <div className="mb-16">
+              <h4 className="text-2xl font-bold text-gray-900 mb-8 text-center">Цели курса</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {courseGoals.map((goal, index) => (
+                  <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-0">
+                    <CardHeader className="text-center pb-4">
+                      <div className="mx-auto mb-4 p-3 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl w-fit">
+                        <div className="text-purple-600">
+                          {goal.icon}
+                        </div>
+                      </div>
+                      <CardTitle className="text-lg text-gray-900">{goal.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-600 text-center leading-relaxed">{goal.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* Course Format */}
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
+              <h4 className="text-2xl font-bold mb-6 text-center">Формат занятий</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="mx-auto mb-4 p-3 bg-white/20 rounded-2xl w-fit">
+                    <Music className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="text-lg font-semibold mb-3">Интерактивные мастер-классы</h5>
+                  <p className="text-purple-100">
+                    Участники будут вовлечены в практические упражнения, направленные на развитие импровизационных навыков.
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="mx-auto mb-4 p-3 bg-white/20 rounded-2xl w-fit">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="text-lg font-semibold mb-3">Групповые задания</h5>
+                  <p className="text-purple-100">
+                    Команды будут работать над совместными проектами, используя принципы импровизации для создания 
+                    инновационных решений.
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="mx-auto mb-4 p-3 bg-white/20 rounded-2xl w-fit">
+                    <MessageCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <h5 className="text-lg font-semibold mb-3">Обсуждения и анализ</h5>
+                  <p className="text-purple-100">
+                    Регулярные сессии обратной связи, где участники смогут делиться своим опытом и получать 
+                    рекомендации по улучшению.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
