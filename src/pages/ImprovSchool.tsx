@@ -171,7 +171,7 @@ const ImprovSchool = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <h3 className="text-xl font-bold mb-3">{member.name}</h3>
-                    <p className="text-sm leading-relaxed text-gray-200 max-h-48 overflow-y-auto">
+                    <p className="text-sm leading-relaxed text-gray-200 max-h-48 overflow-y-auto mb-4">
                       {member.description}
                     </p>
                   </div>
