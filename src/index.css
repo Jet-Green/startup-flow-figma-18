@@ -98,4 +98,31 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    /* 1. Задаем ширину скроллбара */
+    ::-webkit-scrollbar {
+      width: 8px; /* Ширина вертикального скроллбара */
+      height: 8px; /* Высота горизонтального скроллбара */
+    }
+
+    /* 2. Стилизуем трек (дорожку, по которой движется бегунок) */
+    ::-webkit-scrollbar-track {
+      background: transparent; /* Делаем трек прозрачным */
+    }
+
+    /* 3. Стилизуем бегунок (саму полоску прокрутки) */
+    ::-webkit-scrollbar-thumb {
+      background-color: #a0a0a0; /* Цвет бегунка */
+      border-radius: 20px; /* Скругляем углы */
+      border: 2px solid transparent; /* Создаем отступы вокруг бегунка */
+      background-clip: content-box; /* Важно, чтобы border не перекрывался цветом */
+    }
+
+    /* 4. Стиль бегунка при наведении курсора */
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #707070; /* Делаем бегунок темнее при наведении */
+    }
+    scrollbar-width: thin; /* Варианты: 'auto', 'thin', 'none' */
+    scrollbar-color: #a0a0a0 transparent; /* Цвет бегунка и цвет трека */
+  }
 }
