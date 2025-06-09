@@ -1,4 +1,3 @@
-
 import React, { useState } from "react"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
@@ -6,26 +5,37 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { ArrowRight, CheckCircle, TrendingUp, Users, BookOpen, Target, Globe, Lightbulb, ChevronDown, ChevronUp } from "lucide-react"
+import {
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  BookOpen,
+  Target,
+  Globe,
+  Lightbulb,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react"
 
 const Startups = () => {
   const [showCreativeEconomyDefinition, setShowCreativeEconomyDefinition] = useState(false)
 
   const level1Modules = [
     "Маркетинг и культурный код предпринимателя",
-    "Инвестиционный анализ проектов", 
+    "Инвестиционный анализ проектов",
     "Международное право интеллектуальной собственности (Уровень 1) и оценка ИС",
     "Инструменты и формы государственной поддержки технологического предпринимательства и проектов креативной экономики",
     "Венчурное инвестирование",
-    "Медиа-менеджмент в инновационном бизнесе"
+    "Медиа-менеджмент в инновационном бизнесе",
   ]
 
   const level1Outcomes = [
     "создать стратегию развития своего проекта",
-    "составить инвестиционный план", 
+    "составить инвестиционный план",
     "защитить свою интеллектуальную собственность",
     "подать документы для получения государственной поддержки бизнеса",
-    "создать медиа-план и упаковать свой проект для привлечения инвестиций"
+    "создать медиа-план и упаковать свой проект для привлечения инвестиций",
   ]
 
   const level2Modules = [
@@ -34,26 +44,27 @@ const Startups = () => {
     "Менеджмент и управление проектами",
     "Управление интеллектуальными ресурсами компании и корпоративная культура в новых условиях. Креативность, как стратегия",
     "Инструменты государственной поддержки технологического предпринимательства и проектов креативной экономики (Уровень 2)",
-    "Право интеллектуальной собственности и институт залога интеллектуальной собственности (Уровень 2)"
+    "Право интеллектуальной собственности и институт залога интеллектуальной собственности (Уровень 2)",
   ]
 
   const level2Features = [
     "Системный анализ российского и мирового опыта эффективного управления интеллектуальными ресурсами коллектива",
     "Практические инструменты для построения современных команд и корпоративных культур, основанных на личном культурном коде основателя",
-    "Продвинутые инструменты охраны, управления и качественной монетизации результатов творческого труда"
+    "Продвинутые инструменты охраны, управления и качественной монетизации результатов творческого труда",
   ]
 
   const mentors = [
     {
       name: "Сырцов Д.Н.",
       title: "к.э.н., Академический директор образовательных программ",
-      description: "Специализация - инновационное развитие и весь спектр проектов креативной экономики. Сопровождение бизнеса на всех этапах развития. Обширный опыт в креативной экономике, праве интеллектуальной собственности, привлечении инвестиций, стратегическом маркетинге, PM и психологии. Более 30 запущенных стартапов и проектов, некоторые входят в топ 100 в 2024 и 2025 года в России. Консультант в области международного права интеллектуальной собственности."
+      description:
+        "Специализация - инновационное развитие и весь спектр проектов креативной экономики. Сопровождение бизнеса на всех этапах развития. Обширный опыт в креативной экономике, праве интеллектуальной собственности, привлечении инвестиций, стратегическом маркетинге, PM и психологии. Более 30 запущенных стартапов и проектов, некоторые входят в топ 100 в 2024 и 2025 года в России. Консультант в области международного права интеллектуальной собственности.",
     },
     {
       name: "Илья Степанов",
       title: "сооснователь Daily Challenge",
-      description: ""
-    }
+      description: "",
+    },
   ]
 
   return (
@@ -73,22 +84,26 @@ const Startups = () => {
                 креативной экономики
               </span>
             </h1>
-            
+
             <div className="mb-6">
               <button
                 onClick={() => setShowCreativeEconomyDefinition(!showCreativeEconomyDefinition)}
                 className="inline-flex items-center text-blue-600 hover:text-purple-600 transition-colors"
               >
                 <span className="mr-2">*</span>
-                {showCreativeEconomyDefinition ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                {showCreativeEconomyDefinition ? (
+                  <ChevronUp className="w-4 h-4" />
+                ) : (
+                  <ChevronDown className="w-4 h-4" />
+                )}
               </button>
-              
+
               {showCreativeEconomyDefinition && (
                 <div className="mt-4 p-4 bg-blue-50 rounded-lg text-left max-w-3xl mx-auto">
                   <p className="text-gray-700 text-sm">
-                    <strong>Креативная экономика</strong> - сектор экономики, основанный на продаже товаров и услуг, 
-                    являющихся результатом творческой интеллектуальной деятельности, т.е. проекты монетизации 
-                    объектов интеллектуальной собственности
+                    <strong>Креативная экономика</strong> - сектор экономики, основанный на продаже товаров и услуг,
+                    являющихся результатом творческой интеллектуальной деятельности, т.е. проекты монетизации объектов
+                    интеллектуальной собственности
                   </p>
                 </div>
               )}
@@ -97,12 +112,12 @@ const Startups = () => {
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               От идеи до её воплощения и далее - к масштабированию на международном уровне
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3"
-                onClick={() => window.open('https://t.me/your_telegram', '_blank')}
+                onClick={() => window.open("https://t.me/dmitry_syrtsov", "_blank")}
               >
                 Записаться на консультацию
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -137,9 +152,7 @@ const Startups = () => {
                   </div>
                   <Badge className="bg-blue-600 text-white">Уровень 1</Badge>
                 </div>
-                <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900">
-                  Посевная стадия
-                </CardTitle>
+                <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900">Посевная стадия</CardTitle>
                 <p className="text-gray-600 mt-4">
                   Программа для фаундеров технологических стартапов и инициаторов проектов креативной экономики
                 </p>
@@ -158,7 +171,9 @@ const Startups = () => {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">По завершению курса обучающийся сможет:</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                      По завершению курса обучающийся сможет:
+                    </h3>
                     <ul className="space-y-3">
                       {level1Outcomes.map((outcome, index) => (
                         <li key={index} className="flex items-start space-x-3">
@@ -208,13 +223,11 @@ const Startups = () => {
                   </div>
                   <Badge className="bg-purple-600 text-white">Уровень 2</Badge>
                 </div>
-                <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900">
-                  Масштабирование
-                </CardTitle>
+                <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900">Масштабирование</CardTitle>
                 <p className="text-gray-600 mt-4">
-                  Управление интеллектуальными ресурсами компании: От MVP к масштабированию бизнеса. 
-                  От культурного кода предпринимателя к построению корпоративной культуры компании, 
-                  реализуемой на основе богатейшей традиции межкультурной коммуникации и культурного кода народов России.
+                  Управление интеллектуальными ресурсами компании: От MVP к масштабированию бизнеса. От культурного кода
+                  предпринимателя к построению корпоративной культуры компании, реализуемой на основе богатейшей
+                  традиции межкультурной коммуникации и культурного кода народов России.
                 </p>
               </CardHeader>
               <CardContent className="p-8">
@@ -230,7 +243,7 @@ const Startups = () => {
                       ))}
                     </div>
                   </div>
-                  
+
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Данный курс содержит в себе:</h3>
                     <div className="space-y-4">
@@ -257,28 +270,28 @@ const Startups = () => {
                   </div>
                   <Badge className="bg-green-600 text-white">Уровень 3</Badge>
                 </div>
-                <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900">
-                  Выход на мировую арену
-                </CardTitle>
+                <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900">Выход на мировую арену</CardTitle>
                 <p className="text-lg font-medium text-gray-800 mt-4">
-                  Курс "Международный маркетинг инноваций в новых условиях. Экспорто-ориентированный культурно гуманитарный продукт."
+                  Курс "Международный маркетинг инноваций в новых условиях. Экспорто-ориентированный культурно
+                  гуманитарный продукт."
                 </p>
               </CardHeader>
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <p className="text-gray-700 leading-relaxed">
-                    Данный курс посвящен основам и особенностям международного маркетинга в новых условиях мировой экономики. 
-                    Охватывает ключевые аспекты теории и практики маркетинга на локальном и международном уровнях, включая 
-                    инструменты исследования рынков и построения маркетинговых стратегий, а также управление брендом и 
-                    маркетинговыми коммуникациями в локальной и международной среде с использованием современных технологий.
+                    Данный курс посвящен основам и особенностям международного маркетинга в новых условиях мировой
+                    экономики. Охватывает ключевые аспекты теории и практики маркетинга на локальном и международном
+                    уровнях, включая инструменты исследования рынков и построения маркетинговых стратегий, а также
+                    управление брендом и маркетинговыми коммуникациями в локальной и международной среде с
+                    использованием современных технологий.
                   </p>
-                  
+
                   <div className="bg-green-50 p-6 rounded-lg">
                     <h4 className="font-semibold text-gray-900 mb-3">Особое внимание уделено:</h4>
                     <p className="text-gray-700">
-                      Межкультурной коммуникации и культурным основам международного маркетинга, что позволяет использовать 
-                      культурные особенности при создании и развитии экспорто-ориентированных культурно-гуманитарных 
-                      продуктов и экспорто-ориентированных производств.
+                      Межкультурной коммуникации и культурным основам международного маркетинга, что позволяет
+                      использовать культурные особенности при создании и развитии экспорто-ориентированных
+                      культурно-гуманитарных продуктов и экспорто-ориентированных производств.
                     </p>
                   </div>
                 </div>
@@ -295,10 +308,10 @@ const Startups = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Запишитесь на консультацию и получите индивидуальный план развития вашего проекта
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-3"
-            onClick={() => window.open('https://t.me/your_telegram', '_blank')}
+            onClick={() => window.open("https://t.me/dmitry_syrtsov", "_blank")}
           >
             Записаться на консультацию
             <ArrowRight className="ml-2 w-5 h-5" />
