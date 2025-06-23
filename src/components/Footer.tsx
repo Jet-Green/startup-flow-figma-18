@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { Mail, Phone, MessageCircle } from 'lucide-react';
+import React from "react"
+import { Mail, Phone, MessageCircle } from "lucide-react"
 
 const Footer = () => {
   return (
@@ -42,17 +41,17 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Контакты</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-400">
+              {/* <div className="flex items-center space-x-3 text-gray-400">
                 <Mail size={16} />
                 <span>info@dmitrys.ru</span>
-              </div>
+              </div> */}
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone size={16} />
-                <span>+7 (999) 123-45-67</span>
+                <a href="tel:+7 916 537 0860">+7 916 537 0860</a>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <MessageCircle size={16} />
-                <span>Telegram: @dmitrys</span>
+                <span onClick={() => window.open("https://t.me/dmitry_syrtsov", "_blank")}>Telegram: @dmitrys</span>
               </div>
             </div>
           </div>
@@ -63,7 +62,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
